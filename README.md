@@ -17,7 +17,7 @@ deno run dev
 You can clone and deploy this project immediately to start building the Dino
 Runner game.
 
-[![Deploy on Deno](https://deno.com/button)](https://github.com/thisisjofrank/game-tutorial-stage-2.git)
+[![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-2.git)
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
