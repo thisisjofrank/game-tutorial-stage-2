@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>🦕 Dino Runner</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/styles.css">
-  <title>🦕 Dino Runner</title>
-</head>
+  <body>
+    <main>
+      <h1>🦕 Dino Runner</h1>
 
-<body>
-  <main>
-    <h1>🦕 Dino Runner</h1>
+      <section class="game-container">
+        <div class="game-info">
+          <h2>Stage 2: Game Canvas & Controls</h2>
+          <p>
+            Now we have a playable canvas! Use <kbd>Space</kbd> or <kbd>↑</kbd>
+            to jump. Click the canvas to start the game.
+          </p>
+        </div>
 
-    <section class="game-container">
-      <div class="game-info">
-        <h2>Stage 2: Game Canvas & Controls</h2>
+        <div class="canvas-container">
+          <canvas id="gameCanvas" width="800" height="200"></canvas>
+          <div class="game-ui">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="game-status" id="gameStatus">Click to Start!</div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <h3>🎮 Controls</h3>
+          <div class="control-grid">
+            <div class="control-item">
+              <kbd>Space</kbd>
+              <span>Jump</span>
+            </div>
+            <div class="control-item">
+              <kbd>↑</kbd>
+              <span>Jump</span>
+            </div>
+            <div class="control-item">
+              <span>🖱️ Click</span>
+              <span>Start/Jump</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="stage-info">
+        <h3>Stage 2 Features</h3>
+        <div class="feature-grid">
+          <div class="feature-item">
+            <strong>HTML5 Canvas</strong>
+            <p>Game rendering area with responsive design</p>
+          </div>
+          <div class="feature-item">
+            <strong>Game Loop</strong>
+            <p>60fps animation using requestAnimationFrame</p>
+          </div>
+          <div class="feature-item">
+            <strong>Input Handling</strong>
+            <p>Keyboard and mouse controls</p>
+          </div>
+          <div class="feature-item">
+            <strong>Physics</strong>
+            <p>Basic gravity and jumping mechanics</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="health-check">
+        <h3>🔧 Server Status</h3>
         <p>
-          Now we have a playable canvas! Use <kbd>Space</kbd> or <kbd>↑</kbd> to jump.
-          Click the canvas to start the game.
+          Server health check: <a href="/api/health" target="_blank"
+          >Health Check Endpoint</a>
         </p>
-      </div>
-
-      <div class="canvas-container">
-        <canvas id="gameCanvas" width="800" height="200"></canvas>
-        <div class="game-ui">
-          <div class="score">Score: <span id="score">0</span></div>
-          <div class="game-status" id="gameStatus">Click to Start!</div>
-        </div>
-      </div>
-
-      <div class="controls">
-        <h3>🎮 Controls</h3>
-        <div class="control-grid">
-          <div class="control-item">
-            <kbd>Space</kbd>
-            <span>Jump</span>
-          </div>
-          <div class="control-item">
-            <kbd>↑</kbd>
-            <span>Jump</span>
-          </div>
-          <div class="control-item">
-            <span>🖱️ Click</span>
-            <span>Start/Jump</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="stage-info">
-      <h3>Stage 2 Features</h3>
-      <div class="feature-grid">
-        <div class="feature-item">
-          <strong>HTML5 Canvas</strong>
-          <p>Game rendering area with responsive design</p>
-        </div>
-        <div class="feature-item">
-          <strong>Game Loop</strong>
-          <p>60fps animation using requestAnimationFrame</p>
-        </div>
-        <div class="feature-item">
-          <strong>Input Handling</strong>
-          <p>Keyboard and mouse controls</p>
-        </div>
-        <div class="feature-item">
-          <strong>Physics</strong>
-          <p>Basic gravity and jumping mechanics</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="health-check">
-      <h3>🔧 Server Status</h3>
-      <p>
-        Server health check: <a href="/api/health" target="_blank">Health Check Endpoint</a>
-      </p>
-      <p>
-        <small>Should return:
-          <code>{"status": "ok", "message": "🦕 Stage 1 - Dino server is
+        <p>
+          <small>Should return:
+            <code>{"status": "ok", "message": "🦕 Stage 1 - Dino server is
               healthy!"}</code></small>
-      </p>
-    </section>
+        </p>
+      </section>
 
-    <section class="next-steps">
-      <h3>Ready for Stage 3?</h3>
-      <p>Stage 2 establishes our game canvas and controls. In Stage 3, we'll add:</p>
-      <ul style="text-align: left; max-width: 400px; margin: 0 auto">
-        <li>Obstacle generation and collision detection</li>
-        <li>Improved dino sprite and animations</li>
-        <li>Scrolling background elements</li>
-        <li>Score system and game over logic</li>
-      </ul>
-      <br>
-      <a href="#" class="demo-link">Go to stage 3</a>
-    </section>
-  </main>
+      <section class="next-steps">
+        <h3>Ready for Stage 3?</h3>
+        <p>
+          Stage 2 establishes our game canvas and controls. In Stage 3, we'll
+          add:
+        </p>
+        <ul style="text-align: left; max-width: 400px; margin: 0 auto">
+          <li>Obstacle generation and collision detection</li>
+          <li>Improved dino sprite and animations</li>
+          <li>Scrolling background elements</li>
+          <li>Score system and game over logic</li>
+        </ul>
+        <br>
+        <a href="#" class="demo-link">Go to stage 3</a>
+      </section>
+    </main>
 
-  <script src="js/game.js" type="module"></script>
-</body>
-
+    <script src="js/game.js" type="module"></script>
+  </body>
 </html>

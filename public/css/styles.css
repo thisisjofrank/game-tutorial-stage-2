@@ -144,7 +144,13 @@ h1 {
 
 #gameCanvas {
   display: block;
-  background: linear-gradient(to bottom, #87CEEB 0%, #87CEEB 75%, #DEB887 75%, #DEB887 100%);
+  background: linear-gradient(
+    to bottom,
+    #87ceeb 0%,
+    #87ceeb 75%,
+    #deb887 75%,
+    #deb887 100%
+  );
   border-radius: 4px;
   cursor: pointer;
 }
@@ -207,7 +213,7 @@ h1 {
   border-radius: 4px;
   padding: 4px 8px;
   font-size: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .stage-info {
@@ -251,12 +257,12 @@ h1 {
     max-width: 800px;
     height: auto;
   }
-  
+
   .canvas-container {
     width: 100%;
     box-sizing: border-box;
   }
-  
+
   .control-grid {
     flex-direction: column;
     align-items: center;
@@ -267,7 +273,7 @@ h1 {
   body {
     padding: 10px;
   }
-  
+
   .feature-grid {
     grid-template-columns: 1fr;
   }
