@@ -322,3 +322,9 @@ By completing Stage 2, you'll have:
 - ✅ Created a jumping dino character with physics
 - ✅ Established foundation for infinity runner mechanics
 - ✅ Built responsive game UI that works on different screen sizes
+
+## Next Steps
+
+You can now proceed to
+[Stage 3](https://github.com/thisisjofrank/game-tutorial-stage-3), where we will
+add game functionality like obstacles, scoring, and game over mechanics.
