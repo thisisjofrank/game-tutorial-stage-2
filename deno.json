@@ -5,5 +5,9 @@
   },
   "imports": {
     "@oak/oak": "jsr:@oak/oak@17"
+  },
+  "deploy": {
+    "project": "game-tutorial-stage-2",
+    "entrypoint": "src/main.ts"
   }
 }
