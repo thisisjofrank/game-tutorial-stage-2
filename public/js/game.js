@@ -77,7 +77,7 @@ class DinoGame {
     this.score = 0;
     this.updateScore();
     this.updateStatus("");
-    console.log("� Game started!");
+    console.log("🎮 Game started!");
   }
 
   jump() {

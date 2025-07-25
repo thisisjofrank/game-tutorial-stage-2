@@ -19,12 +19,13 @@ Runner game.
 
 [![Deploy on Deno](https://deno.com/button)](https://app.deno.com/new?clone=https://github.com/thisisjofrank/game-tutorial-stage-2.git&install=deno+install)
 
-You will need to edit your Deno Deploy build configuration to set the entrypoint of the project to `src/main.ts`.
+You will need to edit your Deno Deploy build configuration to set the entrypoint
+of the project to `src/main.ts`.
 
 Once deployed, you can clone the created project to your local machine to work
 on it.
 
-# What's in this code?
+## What's in this code?
 
 In stage 2 we add a game canvas and basic controls for the Dino character.
 
@@ -52,9 +53,9 @@ Runner Game/
 **Stage 2 Updates:** Completely redesigned from a simple landing page to a full
 game interface.
 
-### Key HTML Structure Changes
+### Key HTML structure changes
 
-#### 1. Game Canvas Element
+#### 1. Game canvas element
 
 ```html
 <canvas id="gameCanvas" width="800" height="200"></canvas>
@@ -63,7 +64,7 @@ game interface.
 The core game rendering area with fixed dimensions optimized for the dino runner
 gameplay.
 
-#### 2. Game Container with UI Overlay
+#### 2. Game container with UI overlay
 
 ```html
 <div class="canvas-container">
@@ -79,41 +80,36 @@ The canvas is wrapped in a container with absolutely positioned UI elements for
 score and status messages, which will be updated in later stages of this
 tutorial.
 
-#### 3. Interactive Controls Guide
+#### 3. Interactive controls guide
 
 ```html
-<div class="controls">
+<section class="container">
   <h3>🎮 Controls</h3>
   <div class="control-grid">
-    <div class="control-item">
-      <kbd>Space</kbd>
-      <span>Jump</span>
-    </div>
-    <div class="control-item">
-      <kbd>↑</kbd>
-      <span>Jump</span>
-    </div>
-    <div class="control-item">
-      <span>🖱️ Click</span>
-      <span>Start/Jump</span>
-    </div>
+    <kbd>Space</kbd>
+    <kbd>↑</kbd>
+    <span class="click">🖱️ Click</span>
+    <span>Jump</span>
+    <span>Jump</span>
+    <span>Start/Jump</span>
   </div>
-</div>
+</section>
 ```
 
 Visual control guide using semantic `<kbd>` elements for keyboard keys.
 
 The `#gameCanvas` element serves as the main game rendering area where the dino
-character, ground, and future obstacles are drawn using the Canvas 2D API.
+character, ground, and future obstacles are drawn using the
+[Canvas 2D API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API).
 
 ## `public/js/game.js` - Complete game engine
 
 **Stage 2 Updates:** Transformed from a simple health check into a full-featured
 game engine.
 
-### Core Game Architecture
+### Core game architecture
 
-#### 1. DinoGame Class Structure
+#### 1. DinoGame class structure
 
 ```javascript
 class DinoGame {
@@ -143,7 +139,7 @@ class DinoGame {
 The `DinoGame` class encapsulates all game logic, including the dino character's
 properties, game state management, and physics constants.
 
-#### 2. Physics Engine
+#### 2. Physics engine
 
 ```javascript
 updatePhysics() {
@@ -168,7 +164,7 @@ updatePhysics() {
 The `updatePhysics` method implements realistic physics with gravity simulation
 and ground collision detection.
 
-#### 3. Input Handling System
+#### 3. Input handling system
 
 ```javascript
 setupEventListeners() {
@@ -189,7 +185,7 @@ setupEventListeners() {
 
 We add multi-input support for keyboard (Space, ↑) and mouse/touch interactions.
 
-#### 4. Game Loop with requestAnimationFrame
+#### 4. Game loop with requestAnimationFrame
 
 ```javascript
 gameLoop() {
@@ -203,7 +199,7 @@ This method implements the main game loop using `requestAnimationFrame`,
 ensuring smooth 60fps animation, ensuring smooth gameplay across different
 devices.
 
-#### 5. Canvas Rendering System
+#### 5. Canvas rendering system
 
 ```javascript
 render() {
@@ -302,7 +298,7 @@ in later stages.
 
 Note, the actual `.env` file is git-ignored to protect sensitive information
 
-## Running the Code
+## Running the code
 
 To run the server, first install the dependencies, then start the server:
 
@@ -314,7 +310,7 @@ deno run dev
 Navigate to [http://localhost:8000](http://localhost:8000) and you'll see the
 game canvas with a controllable dino character!
 
-## Stage 2 Accomplishments
+## Stage 2 accomplishments
 
 By completing Stage 2, you'll have:
 
@@ -325,7 +321,7 @@ By completing Stage 2, you'll have:
 - ✅ Established foundation for infinity runner mechanics
 - ✅ Built responsive game UI that works on different screen sizes
 
-## Next Steps
+## Next steps
 
 You can now proceed to
 [Stage 3](https://github.com/thisisjofrank/game-tutorial-stage-3), where we will

@@ -1,7 +1,6 @@
 import { Application } from "jsr:@oak/oak/application";
-import { apiRouter, healthRouter } from "./routes/api.routes.ts";
+import { apiRouter } from "./routes/api.routes.ts";
 
-// Deno Deploy uses dynamic ports, fallback to 8000 for local dev
 const PORT = parseInt(Deno.env.get("PORT") || "8000");
 const HOST = Deno.env.get("HOST") || "localhost";
 
@@ -29,5 +28,4 @@ app.listen({
 
 console.log(`🦕 Server is running on http://${HOST}:${PORT}`);
 console.log(`🎯 Visit http://${HOST}:${PORT} to see the game`);
-console.log(`❤️ Health check available at http://${HOST}:${PORT}/health`);
 console.log(`🔧 API health check at http://${HOST}:${PORT}/api/health`);
